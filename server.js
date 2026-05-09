@@ -2,6 +2,11 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 require('dotenv').config();
+process.on('uncaughtException', (err) => {
+  console.error('UNCAUGHT EXCEPTION:', err.message);
+  console.error(err.stack);
+  process.exit(1);
+});
 
 const app = require('./src/app');
 const db = require('./src/config/db');
