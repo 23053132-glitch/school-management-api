@@ -1,0 +1,74 @@
+{
+  "info": {
+    "_postman_id": "f05e0854-19fc-4177-bf55-d78c2f4eac6f",
+    "name": "school management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54130881"
+  },
+  "item": [
+    {
+      "name": "ListSchool",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/schools/listSchools?latitude=28.7041&longitude=77.1025",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "schools",
+            "listSchools"
+          ],
+          "query": [
+            {
+              "key": "latitude",
+              "value": "28.7041"
+            },
+            {
+              "key": "longitude",
+              "value": "77.1025"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "addSchool",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"ABC School\",\r\n  \"address\": \"New Delhi\",\r\n  \"latitude\": 28.6139,\r\n  \"longitude\": 77.2090\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/schools/addSchool",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "schools",
+            "addSchool"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
